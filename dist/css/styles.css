@@ -10821,5 +10821,10 @@ h1, .h1 {
     justify-content: space-around;
   }
 }
+.register-hero {
+  background-color: rgb(165, 121, 162) !important;
+  opacity: 0.8;
+  min-height: 70vh;
+}
 
 /*# sourceMappingURL=styles.css.map */
