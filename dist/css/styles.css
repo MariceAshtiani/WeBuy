@@ -10822,9 +10822,22 @@ h1, .h1 {
   }
 }
 .register-hero {
-  background-color: rgb(165, 121, 162) !important;
-  opacity: 0.8;
+  background: rgba(165, 121, 162, 0.5);
   min-height: 70vh;
+}
+
+.login-hero {
+  background: rgba(107, 118, 175, 0.5);
+  min-height: 70vh;
+}
+
+.login-logo img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.login-logo {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
