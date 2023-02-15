@@ -1,4 +1,5 @@
 import { BASE_API } from "../constants.mjs";
+import * as storage from "../../storage/index.mjs";
 
 const action = "/auth/login";
 const method = "post";
@@ -15,11 +16,15 @@ export async function login(profile) {
         body
     })
 
-    const result = await response.json()
-    console.log(result)
+    const { accessToken, ...user } = await response.json();
+
     alert("You are now logged in")
 
     if (response.ok) {
+        storage.save("token", accessToken);
+
+        storage.save("profile", user);
+
         window.location.replace("/profile/")
     }
 }
