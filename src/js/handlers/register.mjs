@@ -8,7 +8,7 @@ export function setRegisterFormListener() {
             event.preventDefault()
 
             const form = event.target;
-            const formData = new formData(form);
+            const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries())
 
             //send it to the API
