@@ -5,8 +5,11 @@ export default function router() {
     const path = location.pathname;
 
     switch (path) {
-        case '/profile/register':
+        case '/profile/register/':
             listeners.setRegisterFormListener();
+            break;
+        case '/profile/login/':
+            listeners.setLoginFormListener();
             break;
     }
 }
