@@ -19,8 +19,6 @@ export async function register(profile) {
     console.log(profile);
     alert("You are now registered")
 
-    console.log(result)
-
     if (response.ok) {
         window.location.replace("/profile/")
     }
