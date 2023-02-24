@@ -1,5 +1,6 @@
 .card {
     min-height: 50vh;
+    border-width: 2px;
 }
 
 .product-image img {
@@ -9,4 +10,13 @@
     height: 100%;
     margin-bottom: 20px;
     min-height: 25vh;
+}
+
+.view-btn {
+    margin-top: 20%;
+    margin-bottom: 3%;
+}
+
+.end-date {
+    color: #CE241E;
 }

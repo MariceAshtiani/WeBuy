@@ -10776,6 +10776,11 @@ h1, .h1 {
   margin-bottom: 3%;
 }
 
+h2, .h2 {
+  font-size: 1.5vmax;
+  text-decoration: underline;
+}
+
 main {
   min-height: 100vh;
 }
@@ -10846,6 +10851,7 @@ main {
 
 .card {
   min-height: 50vh;
+  border-width: 2px;
 }
 
 .product-image img {
@@ -10855,6 +10861,15 @@ main {
   height: 100%;
   margin-bottom: 20px;
   min-height: 25vh;
+}
+
+.view-btn {
+  margin-top: 20%;
+  margin-bottom: 3%;
+}
+
+.end-date {
+  color: #CE241E;
 }
 
 /*# sourceMappingURL=styles.css.map */
