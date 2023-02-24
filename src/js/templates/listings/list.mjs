@@ -18,7 +18,7 @@ export function renderListings(container, listings) {
     listings.forEach((listing) => {
         const { id, title, description, media, endsAt, created, updated } = listing;
 
-        parent.innerHTML += `<div class="col-sm-4">
+        parent.innerHTML += `<div class="col-12 col-sm-6 col-lg-4">
                                 <div class="card m-4 border-info ">
                                     <div class="card-body">
                                         <div class="w-100">
@@ -28,11 +28,12 @@ export function renderListings(container, listings) {
                                                 </div>
                                                 <div class="product-info p-4">
                                                     <h2>${title}</h2>
-                                                    <p>Ends at: ${endsAt}</p>
+                                                    <p class="text-muted">Updated: ${updated}</p>
+                                                    <h5 class="end-date">Ends at: ${endsAt}</h5>
                                                 <a href="/listing/index.html?id=${id}" class="listing-link">
-                                                    <button class="btn btn-dark">View</button>
+                                                    <button class="btn btn-lg btn-dark view-btn">View</button>
                                                 </a>
-                                                <p class="text-muted">Updated: ${updated}</p>
+                                                
                                                 </div>
                                             </div>
                                         </div>    
