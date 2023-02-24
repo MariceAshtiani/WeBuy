@@ -16,5 +16,8 @@ export default function router() {
         case '/listings/':
             templates.displayListings();
             break;
+        case '/listing/':
+            templates.viewSingleListing();
+            break;
     }
 }

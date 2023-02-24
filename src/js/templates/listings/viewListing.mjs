@@ -6,18 +6,40 @@ export async function viewSingleListing() {
 
     try {
         const listing = await getListing(id);
-        renderListings("#listing", listing);
+        renderListing("#listing", listing);
     } catch (error) {
         console.log(error);
-        displayError("#listing", "Failed to fetch listing");
+        //displayError("#listing", "Failed to fetch listing");
     }
 }
 
-function renderListing(container, listing) {
-    const parent = document.querySelector(container);
+export function renderListing(container, listing) {
+    const parent = document.querySelector("#listing", container);
     parent.innerHTML = "";
 
-    const { id, title, body, created, updated } = listing;
+    const { id, title, description, media, endsAt, created, updated } = listing;
 
-    parent.innerHTML += `This is where i will add my listing-html`
+    parent.innerHTML += `<div">
+                                <div class="card m-4 border-info ">
+                                    <div class="card-body">
+                                        <div class="w-100">
+                                            <div class="product">
+                                                <div class="product-image">
+                                                    <img src="${media[0] ?? "../../../../images/defaultimage.jpg"}" alt="${title}" class="w-100"/>
+                                                </div>
+                                                <div class="product-info p-4">
+                                                    <h2>${title}</h2>
+                                                    <p class="text-muted">Updated: ${updated}</p>
+                                                    <h5 class="end-date">Ends at: ${endsAt}</h5>
+                                                <a href="/listing/index.html?id=${id}" class="listing-link">
+                                                    <button class="btn btn-lg btn-dark view-btn">View</button>
+                                                </a>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    </div>
+                                </div> 
+                            </div>`;
 }
