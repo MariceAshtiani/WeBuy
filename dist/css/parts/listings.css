@@ -21,4 +21,28 @@
   color: #CE241E;
 }
 
+.imgContainer img {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.muted-text {
+  margin-top: 10%;
+}
+
+hr {
+  margin: 7%;
+}
+
+.bids {
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+h3 {
+  margin-bottom: 5%;
+}
+
 /*# sourceMappingURL=listings.css.map */
