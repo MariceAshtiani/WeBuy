@@ -8,15 +8,19 @@ export default function router() {
 
     switch (path) {
         case '/profile/register/':
+        case '&profile/register/index.html':
             listeners.setRegisterFormListener();
             break;
         case '/profile/login/':
+        case '/profile/login/index.html':
             listeners.setLoginFormListener();
             break;
         case '/listings/':
+        case '/listings/index.html':
             templates.displayListings();
             break;
         case '/listing/':
+        case '/listing/index.html':
             templates.viewSingleListing();
             break;
     }
