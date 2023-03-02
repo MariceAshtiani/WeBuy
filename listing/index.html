@@ -50,15 +50,28 @@
 
     </header>
     <main>
-        <div class="container-fluid">
+        <div class="container-fluid w-75">
             <div class="listing" id="listing">Loading...</div>
             <div class="imgContainer row text-center">
                 <h3 class="productImageHeader">Product images</h3>
             </div>
             <hr>
-            <div class="bidContainer text-center">
+            <div class="addBid text-center">
+                <h3>Add your bid:</h3>
+                <form id="addBid">
+                    <div class="form-group mb-3">
+                        <label for="">Bid</label>
+                        <input class="form-control w-50 mx-auto" type="number" name="bid"
+                            placeholder="Add your bid here" required maxlength="1">
+                    </div>
+                    <button class="w-30 btn btn-dark">Add bid</button>
+                </form>
+            </div>
+            <hr>
+            <div class="bidContainer text-center w-50">
                 <h3>Bids</h3>
             </div>
+
             <hr>
             <div class="sellerContainer text-center">
                 <h3 class="m-5">Seller:</h3>
