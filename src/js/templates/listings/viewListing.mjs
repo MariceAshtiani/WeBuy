@@ -26,7 +26,7 @@ export function renderListing(container, listing) {
                             <div class="product-image text-center">
                                 <img src="${media[0] ?? "../../../../images/defaultimage.jpg"}" alt="${title}" class="img-fluid p-4"/>
                             </div> 
-                            <div class="listing-info">
+                            <div class="listing-info card-body">
                                 <h5 class="end-date text-center">Ends at: ${endsAt}</h5>
                                 <h5 class="pl-5"> Description: </h5>
                                 <p> ${description} </p>
@@ -45,8 +45,9 @@ export function renderListing(container, listing) {
         imgContainer.append(img)
     })
 
+    const sortedBids = bids.sort((a, b) => b.amount - a.amount);
 
-    const allBids = bids.forEach(bid => {
+    const allBids = sortedBids.forEach(bid => {
         const { amount, bidderName, created } = bid;
         const bidContainer = document.querySelector(".bidContainer");
         const bidElement = document.createElement('div')
@@ -70,17 +71,19 @@ export function renderListing(container, listing) {
     sellerElement.classList.add("card-body")
     const sellerName = document.createElement('h5')
     const sellerEmail = document.createElement('p')
-    const sellerButton = document.createElement('button')
+    const sellerAvatar = document.createElement('img')
+    sellerAvatar.classList.add("seller-avatar", "rounded-circle", "w-25", "border")
+    const sellerButton = document.createElement('a')
     sellerButton.classList.add("btn", "btn-dark")
 
+    sellerAvatar.src = avatar ? avatar : '../../../images/avatar.jpg';
     sellerName.textContent = name
     sellerEmail.textContent = email
     sellerButton.textContent = "Visit profile"
 
-    const sellerProfile = document.createElement('a')
-    sellerProfile.setAttribute("href", "/api/v1/auction/profiles/{name}")
+    sellerButton.setAttribute("href", "/api/v1/auction/profiles/${name}")
 
-    sellerElement.append(sellerName, sellerEmail, sellerButton)
+    sellerElement.append(sellerAvatar, sellerName, sellerEmail, sellerButton)
     sellerContainer.append(sellerElement)
 
 
