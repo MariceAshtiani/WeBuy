@@ -36,12 +36,24 @@ hr {
 
 .bids {
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 0 auto;
   max-width: 100%;
 }
 
 h3 {
+  margin-bottom: 5%;
+}
+
+.sellerContainer {
+  margin-bottom: 10%;
+}
+
+.bidContainer {
+  margin: 0 auto;
+}
+
+.seller-avatar {
   margin-bottom: 5%;
 }
 
