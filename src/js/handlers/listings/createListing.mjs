@@ -13,8 +13,6 @@ export function setCreateListingFormListener() {
             const mediaValues = formData.getAll('media[]');
             const listing = object.fromEntries(formData.entried())
             post.tags = convertTags(listing.tags)
-            const action = form.action;
-            const method = form.method;
 
 
             console.log(mediaValues);
