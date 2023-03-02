@@ -23,5 +23,10 @@ export default function router() {
         case '/listing/index.html':
             templates.viewSingleListing();
             break;
+        case '/listing/create/':
+        case '/listing/create/index.html':
+            listeners.setAddMoreMediaListener();
+            listeners.setCreateListingFormListener();
+            break;
     }
 }
