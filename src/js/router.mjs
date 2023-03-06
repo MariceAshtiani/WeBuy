@@ -7,6 +7,10 @@ export default function router() {
     const path = location.pathname;
 
     switch (path) {
+        case '/':
+        case '/index.html':
+            templates.displayFeaturedListings();
+            break;
         case '/profile/register/':
         case '&profile/register/index.html':
             listeners.setRegisterFormListener();
@@ -25,8 +29,8 @@ export default function router() {
             break;
         case '/listing/create/':
         case '/listing/create/index.html':
-            listeners.setAddMoreMediaListener();
             listeners.setCreateListingFormListener();
+            listeners.setAddMoreMediaListener();
             break;
     }
 }
