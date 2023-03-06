@@ -18,7 +18,6 @@ export async function login(profile) {
 
     const { accessToken, ...user } = await response.json();
 
-    alert("You are now logged in")
 
     if (response.ok) {
         storage.save("token", accessToken);

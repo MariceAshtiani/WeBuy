@@ -17,7 +17,6 @@ export async function register(profile) {
 
     const result = await response.json()
     console.log(profile);
-    alert("You are now registered")
 
     if (response.ok) {
         window.location.replace("/profile/")
