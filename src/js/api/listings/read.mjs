@@ -5,7 +5,7 @@ const action = "/listings";
 
 /* Gets all listings */
 export async function getListings() {
-    const getListingsURL = `${BASE_API}${action}`;
+    const getListingsURL = `${BASE_API}${action}/?sort=created&sortOrder=desc`;
     const response = await authFetch(getListingsURL)
 
     return await response.json()
