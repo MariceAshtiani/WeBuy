@@ -15,6 +15,11 @@
   max-width: 150px;
 }
 
+.btn-home {
+  background-color: green;
+  color: white;
+}
+
 .homepage-buttons {
   display: flex;
   flex-direction: row;
@@ -24,6 +29,10 @@
 
 .browse {
   text-align: center;
+}
+
+.featured {
+  margin-bottom: 3%;
 }
 
 .view-more a {

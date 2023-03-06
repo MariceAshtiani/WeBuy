@@ -10802,6 +10802,11 @@ main {
   max-width: 150px;
 }
 
+.btn-home {
+  background-color: green;
+  color: white;
+}
+
 .homepage-buttons {
   display: flex;
   flex-direction: row;
@@ -10811,6 +10816,10 @@ main {
 
 .browse {
   text-align: center;
+}
+
+.featured {
+  margin-bottom: 3%;
 }
 
 .view-more a {
@@ -10875,6 +10884,7 @@ main {
 .imgContainer img {
   max-width: 300px;
   margin: 0 auto;
+  padding-bottom: 3%;
 }
 
 .muted-text {
@@ -10910,6 +10920,10 @@ h3, .h3 {
 
 #mediaInputs input {
   margin-bottom: 10px;
+}
+
+.createlisting {
+  background-color: rgba(160, 243, 194, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */

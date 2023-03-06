@@ -24,6 +24,7 @@
 .imgContainer img {
   max-width: 300px;
   margin: 0 auto;
+  padding-bottom: 3%;
 }
 
 .muted-text {
@@ -59,6 +60,10 @@ h3 {
 
 #mediaInputs input {
   margin-bottom: 10px;
+}
+
+.createlisting {
+  background-color: rgba(160, 243, 194, 0.5);
 }
 
 /*# sourceMappingURL=listings.css.map */
