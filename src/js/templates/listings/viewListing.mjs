@@ -1,5 +1,11 @@
 import { getListing } from "../../api/listings/index.mjs";
 import { getParam } from "../../api/utils/tools.mjs";
+import { load } from "../../storage/load.mjs";
+//import { displayError } from "../../api/ui/displayError.mjs";
+
+
+const user = JSON.parse(localStorage.getItem("profile")).name;
+console.log(user);
 
 export async function viewSingleListing() {
     const id = getParam("id");
@@ -20,6 +26,9 @@ export function renderListing(container, listing) {
     const { id, title, description, media, endsAt, created, updated, bids, seller } = listing;
     console.log(listing);
 
+
+
+
     parent.innerHTML += `<div class="p-5">
                             <h1 class="text-center p-4">${title}</h1>
                             <hr>
@@ -35,8 +44,10 @@ export function renderListing(container, listing) {
                                     <p class="text-muted">Updated: ${updated}</p>
                                 </div>
                             </div>
-                            <hr>
                         </div>`;
+
+
+
 
 
 
@@ -118,5 +129,10 @@ export function renderListing(container, listing) {
     sellerElement.append(sellerAvatar, sellerName, sellerEmail, sellerButton)
     sellerContainer.append(sellerElement)
 
+
+    const editBtn = document.querySelector("#editBtn");
+    if (seller.name === user.name) {
+        editBtn.style.display("block");
+    }
 
 }
