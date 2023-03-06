@@ -32,5 +32,9 @@ export default function router() {
             listeners.setCreateListingFormListener();
             listeners.setAddMoreMediaListener();
             break;
+        case '/listing/edit/':
+        case '/listing/edit/index.html':
+            listeners.setUpdateListingFormListener();
+            listeners.setAddMoreMediaListener();
     }
 }
