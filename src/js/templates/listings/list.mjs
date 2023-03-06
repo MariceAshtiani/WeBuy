@@ -15,11 +15,12 @@ export function renderListings(container, listings) {
 
     parent.innerHTML = "";
 
-    listings.forEach((listing) => {
+    const sortedListings = listings.sort((a, b) => new Date(b.created || b.updated) - new Date(a.created || a.updated));
+    sortedListings.forEach((listing) => {
         const { id, title, description, media, endsAt, created, updated } = listing;
 
         parent.innerHTML += `<div class="col-12 col-sm-6 col-lg-4">
-                                <div class="card m-4 border-info ">
+                                <div class="card m-4 border ">
                                     <div class="card-body">
                                         <div class="w-100">
                                             <div class="product">
