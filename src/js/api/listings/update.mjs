@@ -24,6 +24,7 @@ export async function updateListing(listingData) {
 
     if (response.ok) {
         alert("Listing updated");
+        window.location.reload();
     }
 
     return await response.json();
