@@ -15,8 +15,8 @@ export function renderListings(container, listings) {
 
     parent.innerHTML = "";
 
-    const sortedListings = listings.sort((a, b) => new Date(b.created || b.updated) - new Date(a.created || a.updated));
-    sortedListings.forEach((listing) => {
+
+    listings.forEach((listing) => {
         const { id, title, description, media, endsAt, created, updated } = listing;
 
         parent.innerHTML += `<div class="col-12 col-sm-6 col-lg-4">
