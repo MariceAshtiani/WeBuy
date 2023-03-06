@@ -66,4 +66,18 @@ h3 {
   background-color: rgba(160, 243, 194, 0.5);
 }
 
+#delete-btn {
+  background-color: darkred;
+  color: white;
+}
+
+#editBtn {
+  display: none;
+}
+
+#bidBtn {
+  background-color: green;
+  color: white;
+}
+
 /*# sourceMappingURL=listings.css.map */
