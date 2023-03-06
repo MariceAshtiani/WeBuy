@@ -38,32 +38,64 @@ export function renderListing(container, listing) {
                             <hr>
                         </div>`;
 
+
+
+    //Product images
+
     const imgContainer = document.querySelector(".imgContainer");
     media.forEach(imgSrc => {
+        const container = document.createElement('div')
+        container.classList.add("col-12", "col-lg-4")
         const img = document.createElement('img')
         img.src = imgSrc
         imgContainer.append(img)
     })
 
+
+    //bids
     const sortedBids = bids.sort((a, b) => b.amount - a.amount);
 
-    const allBids = sortedBids.forEach(bid => {
-        const { amount, bidderName, created } = bid;
-        const bidContainer = document.querySelector(".bidContainer");
-        const bidElement = document.createElement('div')
-        bidElement.classList.add("card-body", "m-4", "bids")
-        const bidAmount = document.createElement('p')
-        const bidCreated = document.createElement('p')
-        bidCreated.classList.add("text-muted")
-        const bidder = document.createElement('p')
+    const bidContainer = document.querySelector(".bidContainer");
+    const showMoreButton = document.querySelector("#showMore");
 
-        bidAmount.textContent = amount
-        bidder.textContent = bidderName
-        bidCreated.textContent = created
+    let numBidsDisplayed = 5;
 
-        bidElement.append(bidder, bidCreated, bidAmount)
-        bidContainer.append(bidElement)
-    })
+    function displayNexFiveBids() {
+        const remainingBids = sortedBids.slice(numBidsDisplayed);
+        const nextFiveBids = remainingBids.slice(0, 5);
+
+        nextFiveBids.forEach(bid => {
+            const { amount, bidderName, created } = bid;
+            const bidElement = document.createElement('div')
+            bidElement.classList.add("card-body", "m-4", "bids")
+            const bidAmount = document.createElement('p')
+            const bidCreated = document.createElement('p')
+            bidCreated.classList.add("text-muted")
+            const bidder = document.createElement('p')
+
+            bidAmount.textContent = amount
+            bidder.textContent = bidderName
+            bidCreated.textContent = created
+
+            bidElement.append(bidder, bidCreated, bidAmount)
+            bidContainer.append(bidElement)
+        });
+
+        numBidsDisplayed += nextFiveBids.length;
+
+        if (numBidsDisplayed >= sortedBids.length) {
+            showMoreButton.style.display = "none";
+        }
+    }
+
+    displayNexFiveBids();
+
+    showMoreButton.addEventListener("click", displayNexFiveBids);
+
+
+
+
+    //Seller 
 
     const sellerContainer = document.querySelector(".sellerContainer");
     const { name, email, avatar } = seller;
