@@ -39,7 +39,7 @@
             </div>
         </nav>
         <div class="homepage-header">
-            <img src="/images/header.jpg" alt="a phone displaying the WeBuy logo on top of a computer">
+            <img src="/images/Header.jpg" alt="a phone displaying the WeBuy logo on top of a computer">
         </div>
     </header>
     <main>
@@ -47,10 +47,10 @@
             <p>Please register or login to bid</p>
             <div class="homepage-buttons">
                 <a href="/profile/register/">
-                    <button class="btn btn-dark mx-4" type="submit">REGISTER</button>
+                    <button class="btn btn-home mx-4" type="submit">REGISTER</button>
                 </a>
                 <a href="/profile/login/">
-                    <button class="btn  btn-dark mx-4" type="submit">LOG IN</button>
+                    <button class="btn  btn-home mx-4" type="submit">LOG IN</button>
                 </a>
             </div>
         </div>
@@ -58,43 +58,17 @@
         <div class="browse">
             <h1>BROWSE</h1>
 
-            <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+            <div class="container marketing">
 
-                <ol class="carousel-indicators">
-                    <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#homeCarousel" data-slide-to="1"></li>
-                    <li data-target="#homeCarousel" data-slide-to="2"></li>
-                </ol>
-
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="#">
-                    </div>
-
-                    <div class="item">
-                        <img src="#">
-                    </div>
-
-                    <div class="item">
-                        <img src="#">
-                    </div>
+                <!-- columns of text -->
+                <div class="row" id="featured">
                 </div>
 
-                <!-- Left and right controls-->
-                <a class="left carousel-control" href="#homeCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#homeCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <div class="view-more">
+                    <h3><a href="/listings/index.html">View More</a></h3>
+                </div>
             </div>
-
-            <div class="view-more">
-                <a href="#">View More</a>
-            </div>
-        </div>
+            <hr>
     </main>
     <div class="container">
         <footer class="py-3 my-4">
@@ -107,7 +81,7 @@
         </footer>
     </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/src/js/index.mjs"></script>
+    <script src="/src/js/index.mjs" type="module"></script>
 </body>
 
 </html>
