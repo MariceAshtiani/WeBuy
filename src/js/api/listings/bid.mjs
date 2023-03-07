@@ -2,13 +2,13 @@ import { BASE_API } from "../constants.mjs";
 import { load } from "../../storage/index.mjs";
 import { getParam } from "../utils/tools.mjs";
 
-const param = getParam("id");
+const id = getParam("id");
 const method = "post";
 const action = "/listings";
 
 export async function createBid(bidTotal) {
     const token = load("token");
-    const createBidURL = `${BASE_API}${action}${id}/bids`;
+    const createBidURL = `${BASE_API}${action}/${id}/bids`;
 
     console.log(bidTotal);
 
