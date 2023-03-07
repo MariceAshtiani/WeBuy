@@ -22,21 +22,25 @@ export default function router() {
         case '/listings/':
         case '/listings/index.html':
             templates.displayListings();
+            listeners.setLogoutListener();
             break;
         case '/listing/':
         case '/listing/index.html':
             templates.viewSingleListing();
             listeners.createBidListener();
+            listeners.setLogoutListener();
             break;
         case '/listing/create/':
         case '/listing/create/index.html':
             listeners.setCreateListingFormListener();
             listeners.setAddMoreMediaListener();
+            listeners.setLogoutListener();
             break;
         case '/listing/edit/':
         case '/listing/edit/index.html':
             listeners.setUpdateListingFormListener();
             listeners.setAddMoreMediaListener();
             listeners.setRemoveListingListener();
+            listeners.setLogoutListener();
     }
 }
