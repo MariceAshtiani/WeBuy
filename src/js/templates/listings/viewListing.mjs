@@ -75,7 +75,7 @@ export function renderListing(container, listing) {
     const bidContainer = document.querySelector(".bidContainer");
     const showMoreButton = document.querySelector("#showMore");
 
-    let numBidsDisplayed = 1;
+    let numBidsDisplayed = 0;
 
     function displayNexFiveBids() {
         const remainingBids = sortedBids.slice(numBidsDisplayed);
