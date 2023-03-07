@@ -26,6 +26,7 @@ export default function router() {
         case '/listing/':
         case '/listing/index.html':
             templates.viewSingleListing();
+            listeners.createBidListener();
             break;
         case '/listing/create/':
         case '/listing/create/index.html':
@@ -36,5 +37,6 @@ export default function router() {
         case '/listing/edit/index.html':
             listeners.setUpdateListingFormListener();
             listeners.setAddMoreMediaListener();
+            listeners.setRemoveListingListener();
     }
 }
