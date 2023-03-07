@@ -66,13 +66,13 @@ h3 {
   background-color: rgba(160, 243, 194, 0.5);
 }
 
-#delete-btn {
+#removeBtn {
   background-color: darkred;
   color: white;
 }
 
-#editBtn {
-  display: none;
+#edit-button a {
+  text-decoration: none;
 }
 
 #bidBtn {
