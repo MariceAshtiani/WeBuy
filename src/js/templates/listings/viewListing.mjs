@@ -1,11 +1,11 @@
 import { getListing } from "../../api/listings/index.mjs";
 import { getParam } from "../../api/utils/tools.mjs";
 import { load } from "../../storage/load.mjs";
+import { BASE_API } from "../../api/constants.mjs";
 //import { displayError } from "../../api/ui/displayError.mjs";
 
 
-const user = JSON.parse(localStorage.getItem("profile")).name;
-console.log(user);
+
 
 export async function viewSingleListing() {
     const id = getParam("id");
@@ -124,15 +124,26 @@ export function renderListing(container, listing) {
     sellerEmail.textContent = email
     sellerButton.textContent = "Visit profile"
 
-    sellerButton.setAttribute("href", "/api/v1/auction/profiles/${name}")
+    sellerButton.setAttribute("href", `/api/v1/auction/profile/${name}`)
 
     sellerElement.append(sellerAvatar, sellerName, sellerEmail, sellerButton)
     sellerContainer.append(sellerElement)
 
 
-    const editBtn = document.querySelector("#editBtn");
-    if (seller.name === user.name) {
-        editBtn.style.display("block");
-    }
 
+    const user = JSON.parse(localStorage.getItem("profile")).name;
+
+
+    if (seller.name === user) {
+        const editButtonContainer = document.querySelector("#edit-button")
+        const editButton = document.createElement('a')
+        editButton.classList.add("btn", "btn-dark", "mx-auto")
+
+        editButton.textContent = "Edit Listing"
+        const editURL = `/listing/edit/index.html?id=${id}`;
+        console.log(editURL);
+        editButton.setAttribute("href", editURL)
+
+        editButtonContainer.append(editButton)
+    }
 }
