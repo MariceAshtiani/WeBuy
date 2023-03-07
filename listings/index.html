@@ -47,9 +47,30 @@
                 </div>
             </div>
         </nav>
-
     </header>
     <main>
+        <div class="filter-container">
+            <div class="category-head text-center">
+                <p class="category">Categories</p>
+                <ul>
+                    <div class="category-title active" id="all">
+                        <li>All Listings</li>
+                    </div>
+                    <div class="category-title" id="all">
+                        <li>Something else</li>
+                    </div>
+                    <div class="category-title" id="all">
+                        <li>Maybe Cars</li>
+                    </div>
+                    <div class="category-title" id="all">
+                        <li>Maybe Art</li>
+                    </div>
+                    <div class="category-title" id="all">
+                        <li>Feet-pictures</li>
+                    </div>
+                </ul>
+            </div>
+        </div>
         <div class="container-fluid">
             <h1>Listings</h1>
             <div class="listings row" id="listings">Loading...</div>
@@ -69,6 +90,7 @@
     </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/src/js/index.mjs" type="module"></script>
+    <script src="/src/js/handlers/listings/categories.mjs" type="module"></script>
 </body>
 
 </html>
