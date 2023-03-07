@@ -6,7 +6,7 @@ export async function setRemoveListingListener(id) {
     const listingId = getParam("id");
 
     try {
-        const removeButton = document.querySelector("#removeButton");
+        const removeButton = document.querySelector("#removeBtn");
 
         removeButton.addEventListener("click", async ({ target }) => {
             const response = await listings.removeListing(listingId);
