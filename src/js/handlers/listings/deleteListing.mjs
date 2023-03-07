@@ -1,5 +1,4 @@
 import * as listings from "../../api/listings/index.mjs";
-import { removeListing } from "../../api/listings/index.mjs";
 import { getParam } from "../../api/utils/tools.mjs";
 
 export async function setRemoveListingListener(id) {
