@@ -26,6 +26,12 @@ export function renderListing(container, listing) {
     const { id, title, description, media, endsAt, created, updated, bids, seller } = listing;
     console.log(listing);
 
+    const endDate = new Date(endsAt).toLocaleDateString('en-us', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    });
 
 
 
@@ -36,7 +42,7 @@ export function renderListing(container, listing) {
                                 <img src="${media[0] ?? "../../../../images/defaultimage.jpg"}" alt="${title}" class="img-fluid p-4"/>
                             </div> 
                             <div class="listing-info card-body">
-                                <h5 class="end-date text-center">Ends at: ${endsAt}</h5>
+                                <h5 class="end-date text-center">Ends at: ${endDate}</h5>
                                 <h5 class="pl-5"> Description: </h5>
                                 <p> ${description} </p>
                                 <div class="muted-text">
@@ -124,7 +130,9 @@ export function renderListing(container, listing) {
     sellerEmail.textContent = email
     sellerButton.textContent = "Visit profile"
 
-    sellerButton.setAttribute("href", `/api/v1/auction/profile/${name}`)
+
+    const sellerURL = `/profile/index.html/${name}`;
+    sellerButton.setAttribute("href", sellerURL)
 
     sellerElement.append(sellerAvatar, sellerName, sellerEmail, sellerButton)
     sellerContainer.append(sellerElement)
