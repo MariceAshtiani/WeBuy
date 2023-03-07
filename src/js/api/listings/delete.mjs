@@ -25,7 +25,6 @@ export async function removeListing(id) {
 
     if (response.ok) {
         confirm("Are you sure you want to delete this listing?")
-        alert("Listing deleted!")
         window.location.replace("/listings/")
         return await response.json();
     } else {
