@@ -8,6 +8,7 @@ export async function getListings() {
     const getListingsURL = `${BASE_API}${action}?_active=true`;
     const response = await authFetch(getListingsURL)
 
+
     return await response.json()
 }
 

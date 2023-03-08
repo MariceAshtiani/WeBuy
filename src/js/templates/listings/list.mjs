@@ -1,9 +1,12 @@
 import { getListings } from "../../api/listings/index.mjs";
+import { setupSearch } from "../../api/index.mjs";
 
 export async function displayListings() {
     try {
         const listings = await getListings();
         renderListings("#listings", listings);
+
+        setupSearch(listings);
     } catch (error) {
         console.log(error);
         //displayError("#listings", "Failed to get listings");

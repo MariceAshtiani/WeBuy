@@ -1,5 +1,4 @@
 import { BASE_API } from "../constants.mjs";
-import { headers } from "../headers.mjs";
 
 //Doing something similar as the getPosts functions
 export async function getProfiles() {

@@ -1,5 +1,4 @@
 import { BASE_API } from "../constants.mjs";
-import { headers } from "../headers.mjs";
 import { profile } from "../auth/state.mjs";
 
 export async function updateAvatar(avatar) {

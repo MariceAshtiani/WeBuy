@@ -1,5 +1,4 @@
 import { BASE_API } from "../constants.mjs";
-import { headers } from "../headers.mjs";
 
 // doing somewhat the same as deleting post/listing
 export async function deleteProfile(name) {
