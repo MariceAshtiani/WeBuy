@@ -23,20 +23,26 @@
                 <div class="collapse navbar-collapse" id="navbarsExample05">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../listings/">Listings</a>
+                        <li class="nav-item" id="unauth">
+                            <a class="nav-link" href="/profile/register/">Register</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/listing/create/">New Listing</a>
+                        <li class="nav-item" id="unauth">
+                            <a class="nav-link" href="/profile/login/">Log In</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item" id="unauth">
+                            <a class="nav-link" href="/listings/">Listings</a>
+                        </li>
+                        <li class="nav-item" id="auth">
+                            <a class="nav-link" href="/listing/create/">New listing</a>
+                        </li>
+                        <li class="nav-item dropdown" id="auth">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">Profile</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../profile/">View Profile</a></li>
-                                <li><a class="dropdown-item" href="../profile/edit/">Edit Profile</a></li>
+                                <li><a class="dropdown-item" href="/profile/">View Profile</a></li>
+                                <li><a class="dropdown-item" href="/profile/edit/">Edit Profile</a></li>
                                 <li><a class="dropdown-item logout" href="#">Log out</a></li>
                             </ul>
                         </li>
