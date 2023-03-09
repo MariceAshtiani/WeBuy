@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">WeBuy</a>
+                <a class="navbar-brand" href="/index.html">WeBuy</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -21,67 +21,23 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarsExample05">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
-                        </li>
-                        <li class="nav-item" id="unauth">
-                            <a class="nav-link" href="/profile/register/">Register</a>
-                        </li>
-                        <li class="nav-item" id="unauth">
-                            <a class="nav-link" href="/profile/login/">Log In</a>
-                        </li>
-                        <li class="nav-item" id="unauth">
-                            <a class="nav-link active" href="/listings/">Listings</a>
-                        </li>
-                        <li class="nav-item" id="auth">
-                            <a class="nav-link" href="/listing/create/">New listing</a>
-                        </li>
-                        <li class="nav-item dropdown" id="auth">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                                aria-expanded="false">Profile</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/profile/">View Profile</a></li>
-                                <li><a class="dropdown-item" href="/profile/edit/">Edit Profile</a></li>
-                                <li><a class="dropdown-item logout" href="#">Log out</a></li>
-                            </ul>
-                        </li>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-menu">
+
                     </ul>
                     <form role="search" id="search">
                         <input class="form-control" minlength="3" name="term" type="search" placeholder="Search"
                             aria-label="Search" id="searchInput">
-                        <button class="btn btn-dark">Search</button>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="filter-container">
-            <div class="category-head text-center">
-                <p class="category">Categories</p>
-                <ul>
-                    <div class="category-title active" id="all">
-                        <li>All Listings</li>
-                    </div>
-                    <div class="category-title" id="all">
-                        <li>Something else</li>
-                    </div>
-                    <div class="category-title" id="all">
-                        <li>Maybe Cars</li>
-                    </div>
-                    <div class="category-title" id="all">
-                        <li>Maybe Art</li>
-                    </div>
-                    <div class="category-title" id="all">
-                        <li>Feet-pictures</li>
-                    </div>
-                </ul>
-            </div>
-        </div>
         <div class="container-fluid">
             <h1>Listings</h1>
-            <div class="listings row" id="listings">Loading...</div>
+            <div class="listings row text-center" id="listings">
+                <div class="loader"></div>
+            </div>
         </div>
         </div>
         </div>
