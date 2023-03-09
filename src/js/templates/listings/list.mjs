@@ -3,10 +3,11 @@ import { setupSearch } from "../../api/index.mjs";
 
 export async function displayListings() {
     try {
+        const container = document.querySelector("#listings")
         const listings = await getListings();
         renderListings("#listings", listings);
 
-        setupSearch(listings);
+        setupSearch(listings, container);
     } catch (error) {
         console.log(error);
         //displayError("#listings", "Failed to get listings");
@@ -20,7 +21,7 @@ export function renderListings(container, listings) {
 
 
     listings.forEach((listing) => {
-        const { id, title, description, media, endsAt, created, updated } = listing;
+        const { id, title, description, media, endsAt, created, updated, tags, seller } = listing;
 
         const endDate = new Date(endsAt).toLocaleDateString('en-us', {
             weekday: 'long',
