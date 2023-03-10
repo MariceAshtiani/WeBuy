@@ -67,7 +67,7 @@ export default function router() {
             templates.viewProfile();
             listeners.setLogoutListener();
             break;
-        case '/profile/edit':
+        case '/profile/edit/':
         case '/profile/edit/index.html':
             checkAuth();
             listeners.setUpdateProfileFormListener();
