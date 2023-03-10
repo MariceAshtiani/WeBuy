@@ -6,9 +6,9 @@ export async function updateAvatar(avatar) {
     const me = profile()
     const token = load("token");
 
-    const response = await fetch(`${BASE_API}/profiles/${me.name}`, {
+    const response = await fetch(`${BASE_API}/profiles/${me.name}/media`, {
         method: "put",
-        body: JSON.stringify({ ...me, avatar }),
+        body: JSON.stringify({ avatar }),
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
