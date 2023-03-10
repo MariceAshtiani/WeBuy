@@ -1,6 +1,5 @@
 import * as listeners from "./handlers/index.mjs";
 import * as templates from "./templates/index.mjs";
-import * as listings from "./api/listings/index.mjs";
 import { checkAuth } from "./api/index.mjs";
 import { notLoggedIn } from "./api/ui/welcome.mjs";
 
@@ -65,11 +64,13 @@ export default function router() {
         case '/profile/':
         case '/profile/index.html':
             checkAuth();
+            templates.viewProfile();
             listeners.setLogoutListener();
             break;
         case '/profile/edit':
         case '/profile/edit/index.html':
             checkAuth();
+            listeners.setUpdateProfileFormListener();
             listeners.setLogoutListener();
             break;
 

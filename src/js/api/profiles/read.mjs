@@ -1,19 +1,22 @@
 import { BASE_API } from "../constants.mjs";
+import { authFetch } from "../authFetch.mjs";
+import { load } from "../../storage/load.mjs";
 
-//Doing something similar as the getPosts functions
+const action = "/profiles";
+
 export async function getProfiles() {
-    const response = await fetch(`${BASE_API}/profiles`, { headers: headers() });
-    if (response.ok) {
-        return await response.json()
-    }
+    const getProfilesURL = `${BASE_API}${action}`;
 
-    throw new Error(response.statusText);
+    const response = await authFetch(getProfilesURL)
+    return await response.json();
 }
 
 export async function getProfile(name) {
-    const response = await fetch(`${BASE_API}/profiles${name}`, { headers: headers() });
-    if (response.ok) {
-        return await response.json()
+    if (!name) {
+        throw new Error("Name required to get profile");
     }
-    throw new Error(response.statusText);
+
+    const getProfileURL = `${BASE_API}${action}/${name}`;
+    const response = await authFetch(getProfileURL)
+    return await response.json();
 }
