@@ -27,7 +27,7 @@ export async function createBid(bidTotal) {
 
     const listingData = await response.json();
     if (response.ok) {
-        // window.location.reload();
+        window.location.reload();
         return listingData;
     } else {
         alert('Oops, something went wrong. Try to bid higher than the latest bid')
