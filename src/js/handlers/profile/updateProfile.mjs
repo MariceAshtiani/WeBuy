@@ -30,6 +30,7 @@ export async function setUpdateProfileFormListener() {
 
             //semd it to the API
             updateAvatar(profile)
+            console.log(profile)
         })
     }
 }
