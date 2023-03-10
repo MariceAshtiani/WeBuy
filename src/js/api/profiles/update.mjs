@@ -10,7 +10,7 @@ export async function updateAvatar(avatar) {
         method: "put",
         body: JSON.stringify({ ...me, avatar }),
         headers: {
-            "Content Type": "application/json",
+            "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
         }
     })
