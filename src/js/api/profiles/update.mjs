@@ -13,8 +13,9 @@ export async function updateAvatar(avatar) {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
         }
-    })
 
+    })
+    console.log(avatar)
     if (response.ok) {
         return await response.json()
     }

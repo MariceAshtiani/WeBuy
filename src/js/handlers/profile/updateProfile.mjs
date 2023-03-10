@@ -29,7 +29,7 @@ export async function setUpdateProfileFormListener() {
             profile.email = email;
 
             //semd it to the API
-            updateAvatar(profile)
+            updateAvatar(profile.avatar)
             console.log(profile)
         })
     }
