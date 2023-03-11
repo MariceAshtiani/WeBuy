@@ -28,3 +28,22 @@
 .editprofile {
     background-color: rgba(227, 148, 79, 0.5)
 }
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5vmax;
+    }
+
+    h2 {
+        font-size: 1.4vmax;
+    }
+
+    h3 {
+        font-size: 1.2vmax;
+    }
+
+    h5 {
+        font-size: 1vmax;
+    }
+
+}

@@ -141,4 +141,13 @@ h3 {
   text-decoration: underline;
 }
 
+@media (max-width: 400px) {
+  #removeBtn {
+    margin-top: 10px;
+  }
+  p {
+    font-size: 1vmax;
+  }
+}
+
 /*# sourceMappingURL=listings.css.map */

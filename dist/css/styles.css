@@ -11001,6 +11001,14 @@ h3, .h3 {
   text-decoration: underline;
 }
 
+@media (max-width: 400px) {
+  #removeBtn {
+    margin-top: 10px;
+  }
+  p {
+    font-size: 1vmax;
+  }
+}
 .form-control:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -11030,6 +11038,21 @@ h3, .h3 {
 
 .editprofile {
   background-color: rgba(227, 148, 79, 0.5);
+}
+
+@media (max-width: 400px) {
+  h1, .h1 {
+    font-size: 1.5vmax;
+  }
+  h2, .h2 {
+    font-size: 1.4vmax;
+  }
+  h3, .h3 {
+    font-size: 1.2vmax;
+  }
+  h5, .h5 {
+    font-size: 1vmax;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
