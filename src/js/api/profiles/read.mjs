@@ -26,6 +26,7 @@ export async function getProfile(name) {
 export async function getProfileListings() {
     const me = profile()
     const getProfileListingsURL = `${BASE_API}${action}/${me.name}/listings`;
+
     const response = await authFetch(getProfileListingsURL)
 
     return await response.json();

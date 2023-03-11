@@ -38,11 +38,11 @@ export function renderListing(container, listing) {
 
 
 
-    parent.innerHTML += `<div class="p-5">
+    parent.innerHTML += `<div class="">
                             <h1 class="text-center p-4">${title}</h1>
                             <hr>
                             <div class="product-image text-center">
-                                <img src="${media[0] ?? "../../../../images/defaultimage.jpg"}" alt="${title}" class="img-fluid p-4"/>
+                                <img src="${media[0] ?? "/images/defaultimage.jpg"}" alt="${title}" class="img-fluid"/>
                             </div> 
                             <div class="listing-info card-body">
                                 <h5 class="end-date text-center">Ends at: ${endDate}</h5>
@@ -125,19 +125,13 @@ export function renderListing(container, listing) {
     const sellerEmail = document.createElement('p')
     const sellerAvatar = document.createElement('img')
     sellerAvatar.classList.add("seller-avatar", "rounded-circle", "w-25", "border")
-    const sellerButton = document.createElement('a')
-    sellerButton.classList.add("btn", "btn-dark")
 
     sellerAvatar.src = avatar ? avatar : '/images/avatar.jpg';
     sellerName.textContent = name
     sellerEmail.textContent = email
-    sellerButton.textContent = "Visit profile"
 
 
-    const sellerURL = `/profiles/${name}`;  // this is wrong
-    sellerButton.setAttribute("href", sellerURL)
-
-    sellerElement.append(sellerAvatar, sellerName, sellerEmail, sellerButton)
+    sellerElement.append(sellerAvatar, sellerName, sellerEmail)
     sellerContainer.append(sellerElement)
 
 

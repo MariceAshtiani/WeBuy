@@ -38,8 +38,8 @@ export function renderProfile(container, profile) {
 
     const profileName = document.createElement('h2')
 
-    const profileEmail = document.createElement('h2')
-    profileEmail.classList.add("text-muted", "m-5")
+    const profileEmail = document.createElement('h3')
+    profileEmail.classList.add("text-muted", "m-3")
 
     const creditsText = document.createElement('h5')
     const profileCredits = document.createElement('h5')

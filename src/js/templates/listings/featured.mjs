@@ -38,7 +38,7 @@ export function renderFeaturedListings(container, featuredListings) {
         if (count < 9) {
 
             parent.innerHTML += `
-                                <div class="col-lg-4 featured">
+                                <div class="col-12 col-sm-6 col-lg-4 featured">
                                     <img src="${media[0] ?? "../../../images/defaultimage.jpg"}" class="rounded-circle" width="140" height="140"/>
                                     <h2 class="fw-normal">${title}</h2>
                                     <p class=text-muted">${endsAt}</p>
