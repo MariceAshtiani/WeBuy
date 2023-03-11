@@ -6,6 +6,7 @@ export async function displayListings() {
         const container = document.querySelector("#listings")
         const listings = await getListings();
         renderListings("#listings", listings);
+        console.log(listings)
 
         setupSearch(listings, container);
     } catch (error) {
@@ -28,6 +29,9 @@ export function renderListings(container, listings) {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true,
         });
 
 

@@ -25,3 +25,4 @@ export async function getListing(id) {
 
     return await response.json();
 }
+

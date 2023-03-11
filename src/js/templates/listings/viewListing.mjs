@@ -31,6 +31,9 @@ export function renderListing(container, listing) {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true,
     });
 
 
@@ -125,19 +128,20 @@ export function renderListing(container, listing) {
     const sellerButton = document.createElement('a')
     sellerButton.classList.add("btn", "btn-dark")
 
-    sellerAvatar.src = avatar ? avatar : '../../../images/avatar.jpg';
+    sellerAvatar.src = avatar ? avatar : '/images/avatar.jpg';
     sellerName.textContent = name
     sellerEmail.textContent = email
     sellerButton.textContent = "Visit profile"
 
 
-    const sellerURL = `/profile/index.html/${name}`;
+    const sellerURL = `/profiles/${name}`;  // this is wrong
     sellerButton.setAttribute("href", sellerURL)
 
     sellerElement.append(sellerAvatar, sellerName, sellerEmail, sellerButton)
     sellerContainer.append(sellerElement)
 
 
+    //Get an edit-button if you're the seller of the listing
 
     const user = JSON.parse(localStorage.getItem("profile")).name;
 
