@@ -9,16 +9,17 @@ export async function register(profile) {
 
     const response = await fetch(registerURL, {
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
         method,
         body
     })
 
     const result = await response.json()
-    console.log(profile);
+    alert("You are now registered")
 
     if (response.ok) {
-        window.location.replace("/profile/")
+
+        window.location.replace("/profile/login")
     }
 }
