@@ -36,9 +36,9 @@ export function renderProfile(container, profile) {
 
     const profileInfo = document.querySelector(".profile-info")
 
-    const profileName = document.createElement('h3')
+    const profileName = document.createElement('h2')
 
-    const profileEmail = document.createElement('h4')
+    const profileEmail = document.createElement('h2')
     profileEmail.classList.add("text-muted", "m-5")
 
     const creditsText = document.createElement('h5')

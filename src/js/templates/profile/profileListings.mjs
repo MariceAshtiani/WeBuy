@@ -14,10 +14,10 @@ export async function viewProfileListings() {
 export function renderProfileListings(container, listings) {
     const profileListings = document.querySelector(".profile-listings", container)
 
+    profileListings.innerHTML = "";
     listings.forEach((listing) => {
         const { id, title, description, endsAt, media, updated } = listing;
 
-        profileListings.innerHTML = "";
 
         const endDate = new Date(endsAt).toLocaleDateString('en-us', {
             weekday: 'long',
