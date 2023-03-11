@@ -1,0 +1,55 @@
+.homepage-header img {
+    max-width: 2000px;
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.homepage-text p {
+    font-size: 2vmax;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.homepage-buttons a {
+    max-width: 150px;
+}
+
+.btn-home {
+    background-color: green;
+    color: white;
+}
+
+.homepage-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5%;
+}
+
+.browse {
+    text-align: center;
+}
+
+.featured {
+    margin-bottom: 3%;
+}
+
+.view-more a {
+    color: black;
+    font-size: 1.5vmax;
+    display: block;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+@media (max-width: 600px) {
+    .homepage-text p {
+        font-size: 1.5vmax;
+    }
+
+    .homepage-buttons {
+        justify-content: space-around;
+    }
+}

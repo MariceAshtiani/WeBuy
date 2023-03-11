@@ -1,0 +1,49 @@
+.form-control:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.profile-header {
+    position: relative;
+}
+
+.header-image {
+    position: relative;
+}
+
+.profileimage {
+    position: absolute;
+    top: 60%;
+    left: 37%;
+}
+
+.profile-divider {
+    margin-top: 15%;
+}
+
+.user-credit {
+    color: green;
+}
+
+.editprofile {
+    background-color: rgba(227, 148, 79, 0.5)
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5vmax;
+    }
+
+    h2 {
+        font-size: 1.4vmax;
+    }
+
+    h3 {
+        font-size: 1.2vmax;
+    }
+
+    h5 {
+        font-size: 1vmax;
+    }
+
+}

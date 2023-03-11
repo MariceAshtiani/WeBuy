@@ -1,0 +1,29 @@
+{
+  "name": "webuy",
+  "version": "1.0.0",
+  "description": "This is an auction-website for my semester project in year 2",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css && live-server",
+    "start": "npm run build && live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariceAshtiani/WeBuy.git"
+  },
+  "keywords": [],
+  "author": "Marice Ashtiani <marice95@hotmail.no>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariceAshtiani/WeBuy/issues"
+  },
+  "homepage": "https://github.com/MariceAshtiani/WeBuy#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "sass": "^1.58.1"
+  }
+}
