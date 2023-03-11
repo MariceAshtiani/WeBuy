@@ -10944,6 +10944,10 @@ h3, .h3 {
   background-color: rgba(160, 243, 194, 0.5);
 }
 
+.editlisting {
+  background-color: rgba(126, 197, 233, 0.5);
+}
+
 #removeBtn {
   background-color: darkred;
   color: white;
@@ -10995,6 +10999,37 @@ h3, .h3 {
 
 .active {
   text-decoration: underline;
+}
+
+.form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.profile-header {
+  position: relative;
+}
+
+.header-image {
+  position: relative;
+}
+
+.profileimage {
+  position: absolute;
+  top: 60%;
+  left: 37%;
+}
+
+.profile-divider {
+  margin-top: 15%;
+}
+
+.user-credit {
+  color: green;
+}
+
+.editprofile {
+  background-color: rgba(227, 148, 79, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */

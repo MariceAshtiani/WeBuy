@@ -1,0 +1,32 @@
+.form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.profile-header {
+  position: relative;
+}
+
+.header-image {
+  position: relative;
+}
+
+.profileimage {
+  position: absolute;
+  top: 60%;
+  left: 37%;
+}
+
+.profile-divider {
+  margin-top: 15%;
+}
+
+.user-credit {
+  color: green;
+}
+
+.editprofile {
+  background-color: rgba(227, 148, 79, 0.5);
+}
+
+/*# sourceMappingURL=profile.css.map */

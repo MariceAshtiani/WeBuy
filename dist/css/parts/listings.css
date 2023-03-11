@@ -84,6 +84,10 @@ h3 {
   background-color: rgba(160, 243, 194, 0.5);
 }
 
+.editlisting {
+  background-color: rgba(126, 197, 233, 0.5);
+}
+
 #removeBtn {
   background-color: darkred;
   color: white;
