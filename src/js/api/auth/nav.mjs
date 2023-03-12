@@ -41,7 +41,6 @@ export function checkAuth() {
 
     const navLinks = document.querySelectorAll(".nav-link")
     const pathname = window.location.pathname;
-
     navLinks.forEach(navLink => {
         if (navLink.href.includes(pathname)) {
             navLink.classList.add('active');
