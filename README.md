@@ -9,7 +9,7 @@ It is a page created for everyone, but mostly students/adults that are intereste
 
 ## User Stories
 
-###Design 
+### Design 
 
 [✓] desktop version layout
 
